@@ -12,9 +12,6 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
 spec:
-  # Aladdin will fill this in as NodePort which will expose itself to things outside of the cluster
-  # This is to highlight difference between public and private service types, and to only use
-  # public service types when it truly should be public
   ports:
   - name: http
     port: {{ .Values.api.http.httpPort }}
