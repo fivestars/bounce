@@ -15,7 +15,7 @@ spec:
   # Aladdin will fill this in as NodePort which will expose itself to things outside of the cluster
   # This is to highlight difference between public and private service types, and to only use
   # public service types when it truly should be public
-  type: {{ .Values.service.publicServiceType | quote }}
+  # type: {{ .Values.service.publicServiceType | quote }}
   ports:
   - name: http
     port: {{ .Values.api.http.httpPort }}
