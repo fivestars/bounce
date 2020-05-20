@@ -25,7 +25,6 @@ isort = "^4.3.21"
 networkx = "^2.4"
 
 [tool.poetry.scripts]
-docs = "bin.commands.docs:app"
 components = "bin.commands.components:app"
 
 [build-system]

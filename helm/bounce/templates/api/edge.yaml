@@ -1,0 +1,20 @@
+apiVersion: getambassador.io/v2
+kind: FilterPolicy
+metadata:
+  name: authentication-{{ .Chart.Name }}
+spec:
+  rules:
+  - host: '*'
+    path: /{{ .Chart.Name }}/*  # switch to * when we know how to populate host
+    filters:
+    - name: authentication
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: {{ .Chart.Name }}-api
+spec:
+  # host:
+  prefix: /{{ .Chart.Name }}  # remove when we know how to populate host
+  service: {{ .Chart.Name }}-api
+---
