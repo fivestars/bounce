@@ -1,0 +1,10 @@
+# Values here will overwrite values.yaml defaults. These values are used when deploying to KDEV cluster
+
+api:
+  uvicorn:
+    workers: 8
+  apm:
+    datadogEnv: dev
+
+affinity: noncritical
+

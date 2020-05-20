@@ -1,0 +1,7 @@
+{
+    "name": "bounce",
+    "helm_chart": "helm/bounce",
+    "docker_images": [
+        "bounce-api"
+    ]
+}

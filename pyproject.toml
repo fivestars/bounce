@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "bounce"
+version = "0.1.0"
+description = "The bounce service"
+authors = ["Fivestars <dev@fivestars.com>"]
+packages = [
+    # Required for "poetry run ...".
+    # See tool.poetry.scripts below.
+    {include = "bin"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = "^0.2.1"
+
+[tool.poetry.dev-dependencies]
+coloredlogs = "^14.0"
+sphinx = "^3.0.1"
+sphinx-autoapi = "^1.3.0"
+sphinx-rtd-theme = "^0.4.3"
+verboselogs = "^1.7"
+jsonschema = "^3.2.0"
+PyYAML = "^5.3.1"
+isort = "^4.3.21"
+networkx = "^2.4"
+
+[tool.poetry.scripts]
+docs = "bin.commands.docs:app"
+components = "bin.commands.components:app"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
